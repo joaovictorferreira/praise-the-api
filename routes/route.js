@@ -4,6 +4,6 @@ const bossController = require('../controller/bossController');
 
 router.get('/', bossController.findAll);
 
-router.get('/:id', bossController.findById);
+router.get('/:name', bossController.findByName);
 
 module.exports = router;

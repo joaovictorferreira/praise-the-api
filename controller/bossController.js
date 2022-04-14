@@ -12,13 +12,13 @@ exports.findAll = (req, res, next) => {
     });
 };
 
-exports.findById = (req, res, next) => {
-    let bossId = req.params.id
+exports.findByName = (req, res, next) => {
+    let bossName = req.params.name
 
     mysql.getConnection((error, conn) => {
         if(error) {return res.status(500).send({error: error})}
         conn.query(
-            'SELECT * FROM boss where id = ?;', [bossId], 
+            'SELECT * FROM boss where bossName = ?;', [bossName], 
             (error, result, fields) => {
             if(error) {return res.status(500).send({error: error})}
             return res.status(200).send({result})
