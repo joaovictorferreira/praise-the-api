@@ -18,7 +18,7 @@ class bossModel{
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-                'SELECT * FROM boss WHERE bossName LIKE ?;', [bossName + '%'], 
+                'SELECT * FROM boss WHERE bossName= ?;', [bossName], 
                 (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
                 if(result.length == 0) {return res.status(404).send("boss not found")}
