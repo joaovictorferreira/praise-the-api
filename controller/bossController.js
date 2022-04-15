@@ -1,4 +1,3 @@
-const mysql = require('../config/db').pool;
 const bossModel = require('../model/bossModel');
 
 exports.findAll = (req, res, next) => {

@@ -8,7 +8,6 @@ class bossModel{
             conn.query(
               'SELECT * FROM boss;', (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
-                console.log(result)
                 return res.status(200).send({size: result.length, result})
               } 
             );
@@ -19,9 +18,10 @@ class bossModel{
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-                'SELECT * FROM boss where bossName = ?;', [bossName], 
+                'SELECT * FROM boss WHERE bossName LIKE ?;', [bossName + '%'], 
                 (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
+                if(result.length == 0) {return res.status(404).send("boss not found")}
                 return res.status(200).send({result})
               } 
             );
