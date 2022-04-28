@@ -6,27 +6,42 @@ class bossModel{
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-              'SELECT * FROM boss;', (error, result, fields) => {
+              'SELECT bossName, location, souls, health FROM boss;', (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
-                return res.status(200).send({size: result.length, result})
+                return res.status(200).send({size: result.length, bosses: result})
               } 
             );
         });
     }
 
-    static getBossByName(res, bossName){
+    static getBossByName(res, bossId){
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-                'SELECT * FROM boss WHERE bossName= ?;', [bossName], 
+                'SELECT bossName, location, souls, health FROM boss WHERE id= ?;', [bossId], 
                 (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
                 if(result.length == 0) {return res.status(404).send("boss not found")}
-                return res.status(200).send({result})
-              } 
+                
+                return res.status(200).send({boss: result, drops:`https://praise-the-api.herokuapp.com/bosses/drops/${bossId}`})
+              }
             );
         });
     }
+
+    static getBossWeapons(res, bossId){
+      mysql.getConnection((error, conn) => {
+          if(error) {return res.status(500).send({error: error})}
+          conn.query(
+              'SELECT bt.loot, bt.lootDescription FROM boss AS b JOIN bossLoot AS bt ON bossId= ? AND b.id = bossId;', [bossId], 
+              (error, result, fields) => {
+              if(error) {return res.status(500).send({error: error})}
+              if(result.length == 0) {return res.status(404).send("boss not found")}
+              return res.status(200).send({result})
+            }
+          );
+      });
+  }
 }
 
 module.exports = bossModel;

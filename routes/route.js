@@ -6,4 +6,6 @@ router.get('/', bossController.findAll);
 
 router.get('/:name', bossController.findByName);
 
+router.get('/drops/:name', bossController.findWeapons);
+
 module.exports = router;

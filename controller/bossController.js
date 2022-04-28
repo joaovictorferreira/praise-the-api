@@ -6,6 +6,11 @@ exports.findAll = (req, res, next) => {
 };
 
 exports.findByName = (req, res, next) => {
-    let bossName = req.params.name
-    bossModel.getBossByName(res,bossName)
+  let bossId = req.params.name
+  bossModel.getBossByName(res,bossId);
+};
+
+exports.findWeapons = (req, res, next) => {
+  let bossId = req.params.name
+  bossModel.getBossWeapons(res,bossId);
 };

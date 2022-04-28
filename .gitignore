@@ -1,2 +1,5 @@
 node_modules
 fix.txt
+doc.txt
+.env
+.sql
