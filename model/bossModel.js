@@ -6,7 +6,7 @@ class bossModel{
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-              'SELECT bossName, location, souls, health FROM boss;', (error, result, fields) => {
+              'SELECT bossName, location, souls, health FROM boss WHERE souls<>0;', (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
                 return res.status(200).send({size: result.length, bosses: result})
               } 
@@ -33,7 +33,7 @@ class bossModel{
       mysql.getConnection((error, conn) => {
           if(error) {return res.status(500).send({error: error})}
           conn.query(
-              'SELECT bt.loot, bt.lootDescription FROM boss AS b JOIN bossLoot AS bt ON bossId= ? AND b.id = bossId;', [bossId], 
+              "SELECT bt.loot, bt.lootDescription FROM boss AS b JOIN bossLoot AS bt  ON bossId= ? AND b.id = bossId;", [bossId], 
               (error, result, fields) => {
               if(error) {return res.status(500).send({error: error})}
               if(result.length == 0) {return res.status(404).send("boss not found")}
