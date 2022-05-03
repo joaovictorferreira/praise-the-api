@@ -37,7 +37,7 @@ class bossModel{
               (error, result, fields) => {
               if(error) {return res.status(500).send({error: error})}
               if(result.length == 0) {return res.status(404).send("boss not found")}
-              return res.status(200).send({result})
+              return res.status(200).send({drops:result})
             }
           );
       });
