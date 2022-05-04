@@ -6,7 +6,7 @@ class bossModel{
         mysql.getConnection((error, conn) => {
             if(error) {return res.status(500).send({error: error})}
             conn.query(
-              'SELECT bossName, location, souls, health FROM boss WHERE souls<>0;', (error, result, fields) => {
+              'SELECT id, bossName, location, souls, health FROM boss WHERE souls<>0;', (error, result, fields) => {
                 if(error) {return res.status(500).send({error: error})}
                 return res.status(200).send({size: result.length, bosses: result})
               } 
