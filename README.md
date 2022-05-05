@@ -2,15 +2,13 @@
 ![alt text](https://i.pinimg.com/564x/a3/a2/f6/a3a2f67a23e7c74e5529a9937cd355d2.jpg)
 ##### image source: https://br.pinterest.com/pin/673499319247652247/
 <!-- <p>&nbsp;</p> -->
-<br> 
-<br> 
+<br>  
 
 ## *What is the Praise API?*
 
 
 ### The idea of the Praise API is to provide some of the data contained in the Dark souls game to anyone that wants to consume them. The project as it is right now doesn't have a lot of data to be consumed, just a few things that will be covered later on this documentation, that's because the project started with the intuit of improve my skills as a programmer but i intend to improve the API over time to provide more data from this and the others souls games.
 <br>
-<br> 
 
 # **Softwares and other tools used in the project**
 <br>
@@ -32,12 +30,11 @@
 
 * Visual Studio Code &nbsp; <img src="https://img.icons8.com/fluent/2x/visual-studio-code-2019.png" alt="drawing" width="20"/>
 <br>
-<br>
 
 ## *Node.js and modules used* 
 <br>
 
-### *In this project i used the software Node.js for my back-end development, with a couple of modules:*
+### *In this project i used the software Node.js for my back-end development, with a couple of modules:* 
 <br>
 
 ### 1. &nbsp; express, used to deal with the server part of my project and other funcionalities 
@@ -85,10 +82,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### In the code above you can see that i require the swagger module and the sjson file, this is the file that i confugre the swagger documentation, at last i especify the url for the documentation and the others swagger parameters. Note that if you don't want to use swagger you will have to delete this lines from the server.js file and type ```npm uninstall swagger-ui-express``` on your terminal to remove the swagger module from the project, but if you want to use it you just have to create the .json file and require it in the ```sjson``` variable or whatever name that you'll be using on your variable, the rest of how to configure your own swagger json file you can search on the internet for more detailed information.
 <br>
-<br>
 
 ### 5. &nbsp; nodemon, this module is just for help along the development of the project, instead of run the file everytime that i have to change it i use the nodemon, with the nodemon i can just save the file and it restarts the server automatcly, applying the new changes, this module is not needed for the API to work, if you don't want to use it you can uninstall it by typing ```npm uninstall nodemon``` in your terminal.
-<br>
 <br>
 
 ## *Heroku*
@@ -96,12 +91,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### Heroku is the cloud service that i used to deploy my API, i used heroku becouse you can use it for free with certains limitations of course, but for the size of my project is more than enough, you can use the service that you want, you'll just have to adapt the project for the cloud service that you're using.
 <br> 
-<br>
 
 # **Things you can do with this API**
 <br>
 
-## *The API have 3 tipes of responses that you can get*
+### *The API have 3 tipes of responses that you can get*
 
 * ### All the bosses from the game with their essential data
 * ### One boss per request with his essential data
@@ -113,15 +107,14 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### As i mentioned before i used the Swagger module to create the other part of the documentation where you can test the routes of the API and see how it works, what you can get with your's requests, here it's the link to my Swagger documentation, you can go there and test by yourself [Swagger documentation](https://praise-the-api.herokuapp.com/api-docs) 
 <br>
-<br>
 
 # **How can i consume this API?**
 <br>
 
-## *To use the things that this API have to offer to your is pretty simple, i will devide this part in sections to be more clear, so let's begin*.
+### *To use the things that this API have to offer to your is pretty simple, i will devide this part in sections to be more clear, so let's begin*.
 <br>
 
-## To consume the data coming from the API you'll work with url's that i will be listing down below
+### To consume the data coming from the API you'll work with url's that i will be listing down below
 <br>
 
 ### Let's begin with the url that get all the bosses from the game including bosses from the dlc's
@@ -158,12 +151,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### And once again i recommend you to check the [Swagger documentation](https://praise-the-api.herokuapp.com/api-docs) to test out all the url's described above and see what it is their respective responses.
 <br>
-<br>
 
 # **Observations**
 <br>
 
-## *In this section i will pass somethings to keep in mind while consuming the API*
+### *In this section i will pass somethings to keep in mind while consuming the API*
 <br>
 
 ### 1. &nbsp; This API just return the values of the bosses in the new game, not in ng+ and so on, but i pretend to implement the ng+ values when i get the chance.
@@ -173,8 +165,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 <br>
 
 ### 3. &nbsp; There is some bosses that works different like the gargoyles that i didn't separate properly, so you will see that you will get only one boss with the values of the two togheter, i already fixed this in other bosses but i didn't have time to fix this one yet, but it will be fixed.
-<br>
-
 <br>
 
 ### 4. &nbsp; There is a boss that you can get the **Ornstein and Smough**, each of them have 2 phases, the **normal** and the other that i will call **super** phase, if you played the game you know what i mean, so if you want to get either them in the normal phase or in the second phase there will be a different ```ID``` for each one, so remember these ID'S below.
@@ -206,13 +196,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### 9. &nbsp; This is the frist time that i publish a project and a documentation of this size so if you notice anything that i can improve or want to warn me about a mistake or just wanna ask something about the API be sure to contact me on my discord: Jv#8484
 <br>
-<br>
 
 # **References**
 <br>
 
-## *For the most part of my project i just looked for material on the youtube about node and the others tools that i used and did a lot of research in the [w3schools](https://www.w3schools.com/), they have a lot of things there, i do recommend that you use it for anything that you may be current studying, and the [stackoverflow](https://stackoverflow.com/), but i think this one everyone know's at this point right.*
-<br>
+### *For the most part of my project i just looked for material on the youtube about node and the others tools that i used and did a lot of research in the [w3schools](https://www.w3schools.com/), they have a lot of things there, i do recommend that you use it for anything that you may be current studying, and the [stackoverflow](https://stackoverflow.com/), but i think this one everyone know's at this point right.*
 <br>
 
 # **Conclusion**
@@ -222,5 +210,4 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 ##### creator of the animation: https://www.youtube.com/channel/UCQzKg93orSOhEy2hMzO26vg
 <br>
 
-## *That was a fun project to work with, as i said before i pretend to implement a lot of new things to the API and someday i want to create a new dark souls wiki, not just with dark souls things but the souls games in general, it would be very nice, but will take a long time to even start it, for now i need to improve my skills on some of the tools that envolvs web development, i hope that this API and this documentation can be of use for anyone who pass by, good luck with your's project and Praise the sun.*
-
+### *That was a fun project to work with, as i said before i pretend to implement a lot of new things to the API and someday i want to create a new dark souls wiki, not just with dark souls things but the souls games in general, it would be very nice, but will take a long time to even start it, for now i need to improve my skills on some of the tools that envolvs web development, i hope that this API and this documentation can be of use for anyone who pass by, good luck with your's project and Praise the sun.*
