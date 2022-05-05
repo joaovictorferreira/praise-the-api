@@ -1,4 +1,4 @@
 node_modules
 extra
 .env
-doc
+swagger_doc
