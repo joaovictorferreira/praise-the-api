@@ -4,15 +4,12 @@
 <!-- <p>&nbsp;</p> -->
 <br> 
 <br> 
-<br> 
 
 ## *What is the Praise API?*
-<br>
+
 
 ### The idea of the Praise API is to provide some of the data contained in the Dark souls game to anyone that wants to consume them. The project as it is right now doesn't have a lot of data to be consumed, just a few things that will be covered later on this documentation, that's because the project started with the intuit of improve my skills as a programmer but i intend to improve the API over time to provide more data from this and the others souls games.
-
-<br> 
-<br> 
+<br>
 <br> 
 
 # **Softwares and other tools used in the project**
@@ -34,8 +31,6 @@
 <br>
 
 * Visual Studio Code &nbsp; <img src="https://img.icons8.com/fluent/2x/visual-studio-code-2019.png" alt="drawing" width="20"/>
-<br>
-<br>
 <br>
 <br>
 
@@ -131,7 +126,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ### Let's begin with the url that get all the bosses from the game including bosses from the dlc's
 * &nbsp;  https://praise-the-api.herokuapp.com/bosses/
-<br>
 <br>
 
 ### With the link above you'll get some json object with the bosses, you can see the information that you get on the json using the Swagger documentation mentioned before or by just puting this url on your browser, i recommend using the Swagger documentation because it have more information and the json is organized in a way that is more readble, either way this link will provide that array of json object's to you.
