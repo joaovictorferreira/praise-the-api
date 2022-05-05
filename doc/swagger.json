@@ -10,21 +10,20 @@
     },
     "servers": [
         {
-            "url": "http://localhost:3000/bosses",
-            "description": "url for test"
-        },
-        
-        {
             "url": "https://praise-the-api.herokuapp.com/bosses",
             "description": "url for production"
+        },
+        {
+            "url": "http://localhost:3000/bosses",
+            "description": "url for local testing"
         }
     ],
 
     "paths": {
         "/": {
             "get": {
-                "summary": "get all bosses",
-                "description": "route responsible for getting all the bosses of the game and their data",
+                "summary": "Get all bosses",
+                "description": "Route responsible for getting all the bosses of the game and their data",
                 "tags": ["bosses"],
                 "responses": {
                     "200": {
@@ -33,7 +32,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/components/schemas/allBosses"
+                                    "$ref": "#/components/schemas/All bosses"
                                 }
                             }
                         }
@@ -44,14 +43,14 @@
 
         "/{name}":  {
             "get": {
-                "summary": "get boss by name",
-                "description": "route responsible for getting the data of a specific boss by its name",
+                "summary": "Get boss by name",
+                "description": "Route responsible for getting the data of a specific boss by its name",
                 "tags": ["bosses"],
                 "parameters": [
                     {
                         "name": "name",
                         "in": "path",
-                        "description": "name of the boss that you're searching",
+                        "description": "Name of the boss that you're searching",
                         "required": true
                     }
                 ],
@@ -73,14 +72,14 @@
 
         "/drops/{name}": {
             "get": {
-                "summary": "get drop by boss name",
-                "description": "route responsible for getting the drops of a specific boss by its name",
+                "summary": "Get drop by boss name",
+                "description": "Route responsible for getting the drops of a specific boss by its name",
                 "tags": ["bosses"],
                 "parameters": [
                     {
                         "name": "name",
                         "in": "path",
-                        "description": "name of the boss who has the drops that you're searching",
+                        "description": "Name of the boss who has the drops that you're searching",
                         "required": true
                     }
                 ],
@@ -102,7 +101,7 @@
     },
     "components": {
         "schemas": {
-            "allBosses": {
+            "All bosses": {
                 "type": "object",
                 "properties": {
                     "id": {
