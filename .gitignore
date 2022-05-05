@@ -1,5 +1,3 @@
 node_modules
-fix.txt
-doc.txt
+extra
 .env
-queries.sql

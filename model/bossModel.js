@@ -28,7 +28,6 @@ class bossModel{
                 } else {
                   return res.status(200).send({boss: result})
                 } 
-                
               }
             );
         });
@@ -41,7 +40,7 @@ class bossModel{
               "SELECT bt.loot, bt.lootDescription FROM boss AS b JOIN bossLoot AS bt  ON bossId= ? AND b.id = bossId;", [bossId], 
               (error, result, fields) => {
               if(error) {return res.status(500).send({error: error})}
-              if(result.length == 0) {return res.status(404).send("boss not found")}
+              if(result.length == 0) {return res.status(404).send("No drops related please check the observations section in the README file")}
               return res.status(200).send({drops:result})
             }
           );

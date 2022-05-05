@@ -6,7 +6,6 @@ const sjson = require("./doc/swagger.json");
 const app = express();
 const port = process.env.PORT || 3000
 
-
 app.use(express.json());
 app.use('/bosses', routes)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))

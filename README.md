@@ -108,9 +108,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 
 ## *The API have 3 tipes of responses that you can get*
 
-* All the bosses from the game with their essential data
-* One boss per request with his essential data
-* All the itens from a single boss per request with the item and it's data
+* ### All the bosses from the game with their essential data
+* ### One boss per request with his essential data
+* ### All the items from a single boss per request with the item and it's data
 <br>
 
 ### Note that all these data will be returned to you as a json object, so with the url and it's parameters you can get the data you need to consume in your project.
@@ -186,10 +186,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 ### 4. &nbsp; There is a boss that you can get the **Ornstein and Smough**, each of them have 2 phases, the **normal** and the other that i will call **super** phase, if you played the game you know what i mean, so if you want to get either them in the normal phase or in the second phase there will be a different ```ID``` for each one, so remember these ID'S below.
 <br>
 
-* normal-ornstein
-* super-ornstein
-* normal-smough
-* super-smough  
+* ### normal-ornstein
+* ### super-ornstein
+* ### normal-smough
+* ### super-smough  
 <br>
 
 ### The ones that will appear when you search for all the bosses is the super ones, if you want to get the normal ones you''ll have to search them by their ```ID```, just like the way i typed above, and keep in mind that the normal ones doesn't have drops, just the 2nd phase ones.
@@ -205,3 +205,28 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(sjson))
 <br>
 
 ### 8. &nbsp; If you want to use this project to build yours be sure to install the dependencies of the project with the ```npm install``` command, i will post the project without the node_modules file.
+<br>
+
+### 9. &nbsp; There is some itens that you can get after killing a boss, in a room next to the fog of the boss or something, i don't consider these itens as drops of the boss, because they don't literally drop from killing the boss, so if you are looking for these specific itens they won't be listed in the drops of the bosses.
+<br>
+
+### 9. &nbsp; This is the frist time that i publish a project and a documentation of this size so if you notice anything that i can improve or want to warn me about a mistake or just wanna ask something about the API be sure to contact me on my discord: Jv#8484
+<br>
+<br>
+
+# **References**
+<br>
+
+## *For the most part of my project i just looked for material on the youtube about node and the others tools that i used and did a lot of research in the [w3schools](https://www.w3schools.com/), they have a lot of things there, i do recommend that you use it for anything that you may be current studying, and the [stackoverflow](https://stackoverflow.com/), but i think this one everyone know's at this point right.*
+<br>
+<br>
+
+# **Conclusion**
+<br>
+
+![alt text](https://i.makeagif.com/media/5-22-2016/wupnJT.gif)
+##### creator of the animation: https://www.youtube.com/channel/UCQzKg93orSOhEy2hMzO26vg
+<br>
+
+## *That was a fun project to work with, as i said before i pretend to implement a lot of new things to the API and someday i want to create a new dark souls wiki, not just with dark souls things but the souls games in general, it would be very nice, but will take a long time to even start it, for now i need to improve my skills on some of the tools that envolvs web development, i hope that this API and this documentation can be of use for anyone who pass by, good luck with your's project and Praise the sun.*
+
